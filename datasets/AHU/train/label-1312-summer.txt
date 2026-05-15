@@ -1,0 +1,8 @@
+F1:DATA-Fault-free
+F2:DATA-AHU Duct Leaking fault
+F3:DATA-Cooling coil valve control fault
+F4:DATA-Cooling Coil Valve Stuck fault
+F5:DATA-Exhaust air Damper Stuck
+F6:DATA-Heating Coil Valve Leaking fault
+F7:DATA-OA Damper Leaking fault 45
+F8:DATA-Return fan fault
