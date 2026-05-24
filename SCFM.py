@@ -32,7 +32,7 @@ def read_raw_data(dataset='chiller_L1_Train_10'):
     return X, Y
 
 
-def scfm(datax, datay, testx, testy, dataset):
+def scfm(datax, datay, testx, testy):
     stime = time.time()
     # combined = pd.concat([datax, testx], ignore_index=True)
     scaler = MinMaxScaler()
@@ -114,7 +114,7 @@ def scfm(datax, datay, testx, testy, dataset):
         raise ValueError("No available grid_size")
     print('final grid_size:', grid_size)
 
-    output_dir = 'dataset/images_'+str(dataset)
+    output_dir = 'dataset/chiller/image/Train/10
     os.makedirs(output_dir, exist_ok=True)
 
     # save image
@@ -159,4 +159,4 @@ def scfm(datax, datay, testx, testy, dataset):
 
 X, Y = read_raw_data('dataset/RP_1043/tabular/Train/chiller_L1_Train_10')
 testX, testY = read_raw_data('dataset/RP_1043/tabular/Test/chiller_L1_Test_300')
-scfm(X, Y, X, Y, 'chiller_10')
+scfm(X, Y, testX, testY)
