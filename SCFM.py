@@ -114,7 +114,7 @@ def scfm(datax, datay, testx, testy):
         raise ValueError("No available grid_size")
     print('final grid_size:', grid_size)
 
-    output_dir = 'dataset/chiller/image/Train/10
+    output_dir = 'datasets/chiller/image/Train/10
     os.makedirs(output_dir, exist_ok=True)
 
     # save image
@@ -157,6 +157,6 @@ def scfm(datax, datay, testx, testy):
     print("Done!")
 
 
-X, Y = read_raw_data('dataset/RP_1043/tabular/Train/chiller_L1_Train_10')
-testX, testY = read_raw_data('dataset/RP_1043/tabular/Test/chiller_L1_Test_300')
+X, Y = read_raw_data('datasets/chiller/tabular/Train/chiller_L1_Train_10')
+testX, testY = read_raw_data('datasets/chiller/tabular/Test/chiller_L1_Test_300')
 scfm(X, Y, testX, testY)
