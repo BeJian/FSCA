@@ -19,7 +19,7 @@ def data_normalize(rawdata):
     return nor_data
 
 
-def read_raw_data(dataset='RP1043_all'):
+def read_raw_data(dataset='chiller_L1_Train_10'):
     data_path = str(dataset) + '.csv'
     print(data_path)
     if not os.path.exists(data_path):
@@ -157,6 +157,6 @@ def scfm(datax, datay, testx, testy, dataset):
     print("Done!")
 
 
-X, Y = read_raw_data('dataset/chiller/chiller_select_balanced')
-testX, testY = read_raw_data('dataset/chiller/chiller_test_imbalance')
-scfm(X, Y, X, Y, 'chiller_imbalance_train')
+X, Y = read_raw_data('dataset/RP_1043/tabular/Train/chiller_L1_Train_10')
+testX, testY = read_raw_data('dataset/RP_1043/tabular/Test/chiller_L1_Test_300')
+scfm(X, Y, X, Y, 'chiller_image')
